@@ -40,11 +40,44 @@ Teammates open **Customize** in the sidebar. Required and Default On plugins are
 
 This uses a Cursor Teams or Enterprise plan. A Teams plan can import one team marketplace.
 
-## Install on one machine
+## Install for your user
+
+Use this when Cursor blocks plugin install. The installer copies the skills, rules, and commands into your user Cursor folder (`~/.cursor`). Files already there stay in place.
 
 1. Clone this repo.
-2. Copy the folder to `%USERPROFILE%\.cursor\plugins\local\bro-again`.
+2. From the repo folder, run the command for your shell.
+
+Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+Mac, Linux, or Git Bash:
+
+```bash
+bash install.sh
+```
+
 3. Reload Cursor.
 4. In any project, confirm `/brainstorm`, `/make-plan`, and `/create-command` appear.
+
+### Copy by hand
+
+Clone this repo, then copy the contents of these folders into your user Cursor folder. Create a destination folder if it is missing. Leave other files already there as they are.
+
+| From this repo | To your user folder |
+| --- | --- |
+| `skills/` | `~/.cursor/skills/` |
+| `rules/` | `~/.cursor/rules/` |
+| `commands/` | `~/.cursor/commands/` |
+
+On Windows those destinations are:
+
+- `%USERPROFILE%\.cursor\skills\`
+- `%USERPROFILE%\.cursor\rules\`
+- `%USERPROFILE%\.cursor\commands\`
+
+Copy the folders inside `skills/` (`brainstorm`, `make-plan`, `create-command`), and copy the files inside `rules/` and `commands/`. Reload Cursor, then confirm `/brainstorm`, `/make-plan`, and `/create-command` appear in any project.
 
 The plugin id is `bro-again`. The display name is Bro Again?!.
