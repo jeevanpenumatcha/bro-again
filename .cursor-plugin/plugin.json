@@ -1,0 +1,10 @@
+{
+  "name": "bro-again",
+  "displayName": "Bro Again?!",
+  "version": "0.1.0",
+  "description": "Brainstorm ideas, write a plan, and turn repeated project requests into a command.",
+  "author": {
+    "name": "GenAI Development Assets"
+  },
+  "keywords": ["brainstorm", "plans", "commands", "bro-again"]
+}

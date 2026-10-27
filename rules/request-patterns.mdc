@@ -1,0 +1,27 @@
+---
+description: Track repeatable requests per project and offer a command after the same intent is used 3 times
+alwaysApply: true
+---
+
+# Request patterns
+
+After you understand a user message, update this project's pattern log. Do this for repeatable tasks only. Skip greetings, a plain yes or no, and one-off questions.
+
+Log path: `.cursor/bro-again/request-patterns.md` in the open workspace. Create the file if it is missing. On that first create, add `.cursor/bro-again/` to `.gitignore` if that line is absent. Write only this log and that gitignore line. Do not edit project source for this rule.
+
+Each entry is one intent. Never store the raw prompt.
+
+```markdown
+## kebab-summary
+- summary: One line of the intent, written so a similar request matches
+- count: 1
+- last_seen: YYYY-MM-DD
+- suggested: no
+- command:
+```
+
+- Read the log first. If an entry already describes the same intent, increment `count` and set `last_seen` to today. Do not add a second entry.
+- If nothing matches, add one entry with `count: 1`. That summary is what later requests get clubbed into.
+- Counts belong to this project only.
+- When `count` reaches 3 and `suggested` is `no`, answer the user first. Then add one short offer: this kind of request has come up 3 times in this project, and `/create-command` can save a command in this project only. Ask if they want that. Set `suggested` to `yes`.
+- When a command is saved for that pattern, set `command` to its name.
