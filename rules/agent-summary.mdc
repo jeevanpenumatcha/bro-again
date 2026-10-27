@@ -1,0 +1,20 @@
+---
+description: Forces the agent to always provide a clean, jargon-free handoff summary at the end of its work.
+globs: *
+alwaysApply: true
+---
+
+
+# 📝 Agent Hand-Off & Summary Rule
+
+Whenever you finish a task, successfully edit code, execute terminal commands, or hit a natural stopping point where you require user feedback, you must append an "Executive Summary" at the very end of your response. 
+
+Format it strictly using this exact structure:
+
+### 🛠️ What I Just Did
+- Translate all technical tool calls, file edits, and terminal actions into a simple, jargon-free bulleted list.
+- Explain *why* the changes were made using plain, accessible language.
+- Explicitly list any new files created, packages installed, or structural changes made.
+
+### 🔍 Next Steps & Verification
+- Provide 1-2 incredibly simple, step-by-step instructions on how the user can test, run, or verify the changes you just completed.
