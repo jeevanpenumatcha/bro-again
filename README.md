@@ -25,12 +25,26 @@ After the same intent is used 3 times, the reply offers `/create-command` once.
 
 The first time the log is created, `.cursor/bro-again/` is added to the project's `.gitignore` so the counts are not committed.
 
-## Install on Windows
+## Install for the team
+
+A Cursor team admin does this once. Teammates then install from inside Cursor.
+
+1. Open the [Cursor dashboard](https://cursor.com/dashboard) and go to **Plugins & MCPs**.
+2. Under **Team Marketplaces**, choose **Add Marketplace**, then **Import from Repo**.
+3. Paste `https://github.com/jeevanpenumatcha/bro-again`.
+4. Review **Bro Again?!**. Set installation to **Required** so everyone gets it, or **Default On** so it is installed and people can opt out.
+5. Under **Marketplace Settings**, turn on **Serve marketplace from Cursor** so teammates install with their Cursor login. Turn on **Auto Refresh** so a push to this repo updates the plugin.
+6. Save.
+
+Teammates open **Customize** in the sidebar. Required and Default On plugins are already installed. Otherwise choose **Bro Again?!**, then **Install**. Reload Cursor. `/brainstorm`, `/make-plan`, and `/create-command` then work in any project.
+
+This uses a Cursor Teams or Enterprise plan. A Teams plan can import one team marketplace.
+
+## Install on one machine
 
 1. Clone this repo.
-2. Link or copy it to `%USERPROFILE%\.cursor\plugins\local\bro-again`.
+2. Copy the folder to `%USERPROFILE%\.cursor\plugins\local\bro-again`.
 3. Reload Cursor.
-4. In any other project, confirm `/brainstorm`, `/make-plan`, and `/create-command` appear.
-5. Send a repeatable request and confirm `.cursor/bro-again/request-patterns.md` in that project gains a summary, not the raw prompt.
+4. In any project, confirm `/brainstorm`, `/make-plan`, and `/create-command` appear.
 
 The plugin id is `bro-again`. The display name is Bro Again?!.

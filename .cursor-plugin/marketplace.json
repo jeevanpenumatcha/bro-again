@@ -1,0 +1,16 @@
+{
+  "name": "bro-again",
+  "owner": {
+    "name": "GenAI Development Assets"
+  },
+  "metadata": {
+    "description": "Bro Again?! — brainstorm, write a plan, and turn a repeated request into a command."
+  },
+  "plugins": [
+    {
+      "name": "bro-again",
+      "source": ".",
+      "description": "Brainstorm ideas, write a plan, and turn repeated project requests into a command."
+    }
+  ]
+}
